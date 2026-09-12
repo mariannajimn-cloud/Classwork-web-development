@@ -16,9 +16,10 @@
       <cite>My dad</cite>
     </blockquote>
   </header>
-
+  
   <main>
     <section>
+      <hr>
       <h2>- Background -</h2>
         <p>Since kid, I have been interested in technology and how it can be used to solve problems of our daily lives. I enjoy learning new things and improve as a professional. As a computer Science professional, I imagine myself contributing to innovative solutions that make a positive impact.</p>
       <section>
@@ -82,7 +83,7 @@
         </ol>
       </section>
     </section>
-
+<hr>
     <section>
       <h2> - Hobbies -</h2>
 
@@ -105,6 +106,7 @@
         </ol>
       </section>
 
+      <hr>
       <h2> - Books & Movies -</h2>
 
       <table>
@@ -147,7 +149,7 @@
           </tbody>
         </table>
     </section>
-
+<hr>
     <section>
       <h2> <a href="destination.html"> - My Favorite Spots -</a></h2>
         
@@ -158,69 +160,135 @@
           <a href="destination.html#madrid">Madrid</a>
           <a href="destination.html#stockholm">Stockholm</a>
 </nav>
-  </section>
-
-  <section>
-      <h2> - Heroes/Writers/Musicians - </h2>
-
 
   </section>
-
+<hr>
   <section>
-    <form action="#" method="POST">
-        <h2>Weekly Schedule Registration</h2>
+    <h2>Heroes, Writers & Musicians</h2>
+  
+    <table border="1" cellpadding="12">
+     <thead>
+        <tr>
+          <th>Picture</th>
+          <th>Name</th>
+          <th>Date of Birth/Death</th>
+          <th>Profession</th> 
+          <th>Achievements/Famous Works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="images/HarryStyles.jpg" alt="Harry Styles" height="100" width="110"></td>
+          <td>Harry Styles</td>
+          <td>Feb 1, 1994</td>
+          <td>Musician / Singer-songwriter</td>
+          <td>Album of the Year Grammy for "Harry's House", hit singles "Watermelon Sugar" and "As It Was".</td>
+        </tr>
+        <tr>
+          <td><img src="images/adele.jpg" alt="Adele" height="100" width="110"></td>
+          <td>Adele</td>
+          <td>May 5, 1988</td>
+          <td>Musician / Singer-songwriter</td>
+          <td>16-time Grammy Award winner, Oscar winner for "Skyfall", diamond-certified albums "21" and "25".</td>
+        </tr>
+        <tr>
+          <td><img src="images/kobe.jpg" alt="Kobe Bryant" height="120" width="110"></td>
+          <td>Kobe Bryant</td>
+          <td>Death date: Jan 26, 2020</td>
+          <td>Athlete / Writer & Producer</td>
+          <td>5-time NBA Champion, 2-time Olympic Gold Medalist, Academy Award winner for "Dear Basketball".</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-      <div>
-        <label for="sched-date">Date:</label><br>
-        <input type="date" id="sched-date" name="sched_date">
-      </div><hr>
-      <div>
-        <label for="sched-start">Time start:</label><br>
-        <input type="time" id="sched-start" name="sched_start">
-      </div> <hr>
-      <div>
-        <label for="sched-end">Time end:</label><br>
-        <input type="time" id="sched-end" name="sched_end">
-      </div><hr>
-      <div>
-        <label for="sched-activity">Activity:</label><br>
-        <input type="text" id="sched-activity" name="sched_activity" placeholder="Enter activity name">
-      </div><hr>
-      <div>
-        <label for="sched-place">Place:</label><br>
-        <input type="text" id="sched-place" name="sched_place" placeholder="Enter location">
-      </div><hr>
-      <div>
-        <label for="sched-type">Type:</label><br>
-        <select id="sched-type" name="sched_type">
-            <option value="school">School</option>
-            <option value="personal">Personal</option>
-            <option value="profesional">Profesional</option>
-            <option value="familiar">Familiar</option>
-            <option value="other">Other</option>
-        </select>
-      </div><hr>
-      <div>
-        <label for="sched-notes">Notes:</label><br>
-        <textarea id="sched-notes" name="sched_notes" rows="4" cols="30" placeholder="Add any extra notes here..."></textarea>
-      </div><hr>
-      <div>
-        <label for="sched-flag">Flag:</label><br>
-        <input type="color" id="sched-flag" name="sched_flag" value="#ff0000">
-      </div><hr>
-      <div>
-        <input type="checkbox" id="sched-freebusy" name="sched_freebusy">
-        <label for="sched-freebusy">Free/busy</label>
-      </div>
-      <br>
-      <button type="submit">Register Activity</button>
+
+  <hr>
+  <section>  
+    <h2>- Weekly Schedule -</h2>
+      <table border="1" cellpadding="12">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Description</th>
+            <th>Place</th>
+            <th>Type</th>
+            <th>Notes</th>
+            <th>Busy/Free</th>
+          </tr>
+          <tr>
+            <td>Monday 14th</td>
+            <td>1:00 PM</td>
+            <td>3:00 PM</td>
+            <td>Gym and training</td>
+            <td>Basketball</td>
+            <td>UP gym</td>
+            <td>Defense and offensive review</td>
+            <td>Busy</td>
+          </tr>
+          <tr>
+            <td>Tuesday 15th</td>
+            <td>9:00 AM</td>
+            <td>11:00 AM</td>
+            <td>Team meeting</td>
+            <td>School</td>
+            <td>CompuAula2</td>
+            <td>Project work</td>
+            <td>Busy</td>
+        </thead>
+      </table>
+  </section>
+
+  <hr>
+  <section id="schedule-registration">
+    <h2>Schedule Registration</h2>
+    <p>
+      <label for="date">Date:</label><br>
+      <input type="date" id="date" name="date" required>
+    </p>
+    <p>
+      <label for="start-time">Time start:</label><br>
+      <input type="time" id="start-time" name="start_time" required>
+    </p>
+    <p>
+      <label for="end-time">Time end:</label><br>
+      <input type="time" id="end-time" name="end_time" required>
+    </p>
+    <p>
+      <label for="activity">Activity:</label><br>
+      <input type="text" id="activity" name="activity" placeholder="e.g. Class, Practice, Meeting" required>
+    </p>
+    <p>
+      <label for="place">Place:</label><br>
+      <input type="text" id="place" name="place" placeholder="e.g. Room 101, Gym, Online">
+    </p>
+    <p>
+      <label for="type">Type:</label><br>
+      <select id="type" name="type">
+        <option value="school">School</option>
+        <option value="personal">Personal</option>
+        <option value="profesional">Profesional</option>
+        <option value="familiar">Familiar</option>
+        <option value="other">Other</option>
+      </select>
+    </p>
+    <p>
+      <label for="notes">Notes:</label><br>
+      <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Add additional details..."></textarea>
+    </p>
+    <p>
+      <label for="flag">Flag:</label><br>
+      <input type="color" id="flag" name="flag" value="#ff0000">
+    </p>
+    <p>
+      <label for="busy">Free / Busy:</label><br>
+      <input type="checkbox" id="busy" name="busy" value="1"> Busy?
+    </p>
   </form>
-
-    
-    </section>
-
-
-
+</section>
+  </section>
 
   </main>
 </body>

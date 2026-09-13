@@ -1,3 +1,27 @@
 body {
     margin: 0;
 }
+
+.top, .mid, .bot {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box; /* bordes exactos */
+}
+
+.top {
+    background-color: pink;
+    border: 10px solid;
+    padding: 20px;
+}
+
+.mid {
+    background-color: lightseagreen;
+    border: 20px solid;
+    padding: 20px;
+}
+
+.bot {
+    background-color: lightblue;
+    border: 10px solid;
+    padding: 20px;
+}

@@ -19,6 +19,24 @@
                 <input type="text" name="name" id="name" placeholder="Name">
                 <input type="submit" value="go next">
             </form>
+        
+            <% if(locals.name) { %>
+                <h4> Hello, <%= name %> , welcome </h4>
+            <% } %>
+
+            <h4> Register names: </h4>
+            <ul>
+                <% names.forEach(function(n) { %>
+                <li>
+                    <a href="/wazzup?name=<%= n %>"><%= n %></a>
+                <% }); %>
+                </li>
+            </ul>
+
+            <h4> TODO list </h4>
+            <ul>
+                
+            </ul>
 
 </body>
 

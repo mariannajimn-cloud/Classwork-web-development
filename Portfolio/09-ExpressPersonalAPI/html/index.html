@@ -24,19 +24,39 @@
                 <h4> Hello, <%= name %> , welcome </h4>
             <% } %>
 
-            <h4> Register names: </h4>
+            <h4> Registered names: </h4>
             <ul>
-                <% names.forEach(function(n) { %>
+                <% names.forEach(function(n, index) { %>
                 <li>
-                    <a href="/wazzup?name=<%= n %>"><%= n %></a>
-                <% }); %>
+                    <a href="/wazzup?index=<%= index %>"><%= n %></a>
                 </li>
+                <% }); %>
             </ul>
 
-            <h4> TODO list </h4>
-            <ul>
+    <h4> TODO list </h4>
+        <form action="/task" method="POST">
+            <input type="text" name="task" placeholder="New task...">
+            <input type="submit" value="Add Task">
+        </form>
+
+    <ul>
+        <!-- Loop through the tasks array -->
+        <% tasks.forEach(function(t, index) { %>
+            <li>
+            <!-- Display the task description -->
+            <%= t %> 
                 
-            </ul>
+            <!-- Link to delete this specific task by passing its index via query parameters -->
+            <a href="/task/delete?index=<%= index %>">[Delete]</a>
+            <% if (index > 0) { %>
+                <a href="/task/up?index=<%= index %>">[↑]</a>
+            <% } %>                
+            <% if (index < tasks.length - 1) { %>
+                <a href="/task/down?index=<%= index %>">[↓]</a>                
+            <% } %>
+            </li>
+        <% }); %>
+    </ul>
 
 </body>
 
